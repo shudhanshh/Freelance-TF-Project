@@ -1,0 +1,8 @@
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: ingress-cert-array
+spec:
+  domains:
+    - mamta-test.array.io
+    - mamta-test-1.array.io

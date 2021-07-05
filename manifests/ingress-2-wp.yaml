@@ -1,0 +1,22 @@
+--- 
+  apiVersion: extensions/v1beta1
+  kind: Ingress
+  metadata: 
+    name: ingress-wp
+    annotations:
+      kubernetes.io/ingress.global-static-ip-name: domain2
+      networking.gke.io/managed-certificates: ingress-cert-wp
+      nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+  spec:
+ #   defaultBackend:
+  #    service:
+   #     name: wordpress
+    #    port:
+     #     number: 80
+    rules: 
+      - host: mamta-test-2.array.io
+        http: 
+          paths: 
+            - backend: 
+                serviceName: nginx
+                servicePort: 80

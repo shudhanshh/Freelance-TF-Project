@@ -1,0 +1,26 @@
+--- 
+  apiVersion: extensions/v1beta1
+  kind: Ingress
+  metadata: 
+    name: test-ingress
+    annotations:
+      # kubernetes.io/ingress.allow-http: "false"
+      kubernetes.io/ingress.global-static-ip-name: test-reservation
+      networking.gke.io/managed-certificates: ingress-cert-array
+      nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+      #networking.gke.io/v1beta1.FrontendConfig: "nginx-fe"
+      # kubernetes.io/ingress.class: "gce"
+  spec:
+    rules: 
+      - host: mamta-test.array.io
+        http: 
+          paths: 
+            - backend: 
+                serviceName: nginx
+                servicePort: 80
+      - host: mamta-test-1.array.io
+        http: 
+          paths: 
+            - backend: 
+                serviceName: nginx
+                servicePort: 80

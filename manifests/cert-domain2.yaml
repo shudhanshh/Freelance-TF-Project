@@ -1,0 +1,7 @@
+apiVersion: networking.gke.io/v1beta1
+kind: ManagedCertificate
+metadata:
+  name: ingress-cert-wp
+spec:
+  domains:
+    - mamta-test-2.array.io
