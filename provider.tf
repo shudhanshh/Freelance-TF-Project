@@ -4,7 +4,6 @@ provider "google" {
   project = var.project
   region  = var.region
   zone    = var.zone
-  credentials = file("./gke-terraform-mamta-5adcc9c63414.json")
 }
 
 provider "google-beta" {
@@ -12,7 +11,6 @@ provider "google-beta" {
   project = var.project
   region  = var.region
   zone    = var.zone
-  credentials = file("./gke-terraform-mamta-5adcc9c63414.json")
 }
 
 #data "google_client_config" "current" {}
