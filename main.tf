@@ -173,29 +173,3 @@ resource "null_resource" "run_cmd" {
  }
 
 
-# //Configure foresti
-
-# module "forseti-on-gke" {
-#     source                  = "terraform-google-modules/forseti/google//examples/on_gke"
-#     domain                  = "array.com"
-#     gsuite_admin_email      = "mamta.yadlpalli@array.com"
-#     org_id                  = "897878080559"
-#     project_id              = var.project
-#     region                  = var.region
-
-#     gke_cluster_name        = var.cluster_name
-#     gke_cluster_location    = var.region
-# }
-
-module "forseti_on_gke" {
-  source  = "terraform-google-modules/forseti/google//examples/on_gke"
-  version = "5.2.2"
-  domain                  = "array.com"
-  gsuite_admin_email      = "mamta.yadlpalli@array.com"
-  org_id                  = "897878080559"
-  project_id              = var.project
-  region                  = var.region
-  gke_cluster_name        = var.cluster_name
-  gke_cluster_location    = var.region
-  gke_node_pool_name      = google_container_node_pool.private-np-1.name
-}

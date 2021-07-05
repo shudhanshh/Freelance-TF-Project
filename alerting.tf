@@ -65,17 +65,17 @@ resource "google_logging_metric" "logging_metric_SQL_instance_configuration_chan
 }
 #Creating alertpolicy
 resource "google_monitoring_notification_channel" "email0" {
-  display_name = "mamta.yadlpalli@array.com"
+  display_name = "email3"
   type = "email"
   labels = {
-    email_address = "mamta.yadlpalli@array.com"
+    email_address = "shudhanshubadkur97@gmail.com"
   }
 }
 resource "google_monitoring_notification_channel" "email1" {
-  display_name = "phillip@array.com"
+  display_name = "shudhanshu"
   type = "email"
   labels = {
-    email_address = "phillip@array.com"
+    email_address = "shudhanshubadkur97@gmail.com"
   }
 }
 #alert policy for projectownershiplog
