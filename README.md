@@ -1,6 +1,6 @@
 # One click infra deployment using Terraform
 
-# How to use a Private Cluster in Kubernetes Engine
+# Private Cluster in Kubernetes Engine with L7 loadbalancer, ssl Certificates, and alerting policies.
 
 ## Table of Contents
 
